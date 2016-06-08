@@ -1,0 +1,24 @@
+#if($model.declarations)
+/*
+#foreach($declaration in $model.declarations)
+ * $declaration
+#end
+ * <p>${model.name}.java</p>
+ */
+#end
+package $model.packageName;
+
+/**
+ * $!model.note
+ *
+ * @version $!model.version
+ * @author $!model.author
+ * @date $!model.date
+ */
+public class $model.name {
+	
+#parse("fields.vm")
+
+#parse("methods.vm")
+
+}

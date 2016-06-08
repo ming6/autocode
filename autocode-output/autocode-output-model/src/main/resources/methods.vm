@@ -1,0 +1,8 @@
+#foreach($field in $model.fields)
+	public void ${field.setMethodName}($field.type $field.name){
+		this.$field.name = $field.name;
+	}
+	public $field.type ${field.getMethodName}(){
+		return $field.name;
+	}
+#end

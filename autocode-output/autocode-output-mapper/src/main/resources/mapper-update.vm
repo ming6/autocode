@@ -1,0 +1,5 @@
+	<update id="update">
+		UPDATE $mapper.tableName
+		<include refid="update_sql" />
+		WHERE ID = #{id}
+	</update>

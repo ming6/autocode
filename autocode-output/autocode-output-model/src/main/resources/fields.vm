@@ -1,0 +1,4 @@
+#foreach($field in $model.fields)
+	//$field.note
+	private $field.type $field.name;
+#end

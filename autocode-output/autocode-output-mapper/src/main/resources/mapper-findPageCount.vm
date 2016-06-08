@@ -1,0 +1,5 @@
+	<select id="findPage_count" resultType="long">
+		SELECT COUNT(1)
+		FROM $mapper.tableName
+		<include refid="findPage_where" />
+	</select>

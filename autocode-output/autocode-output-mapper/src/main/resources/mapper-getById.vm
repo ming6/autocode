@@ -1,0 +1,6 @@
+	<select id="getById" resultMap="RM_$mapper.simpleModelName">
+		SELECT 
+		<include refid="columns" />
+		FROM $mapper.tableName
+		WHERE ID = #{id}
+	</select>

@@ -1,0 +1,7 @@
+	<delete id="delete_batch">
+		DELETE FROM $mapper.tableName
+		WHERE id IN
+		<foreach item="ids" collection="list" open="(" separator="," close=")">
+			#{ids}
+		</foreach>
+	</delete>

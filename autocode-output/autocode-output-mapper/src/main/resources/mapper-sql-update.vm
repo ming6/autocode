@@ -1,0 +1,9 @@
+	<sql id="update_sql">
+		<set>
+#foreach($mapping in $mapper.mappings)
+			<if test="$mapping.property != null">
+				$mapping.property = #{$mapping.column}#if($velocityCount<$mapper.mappings.size()),#end\n
+			</if>
+#end
+		</set>
+	</sql>

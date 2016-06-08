@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+	"-//ibatis.apache.org//DTD Mapper 3.0//EN"
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<!-- 该文件为自动生成,不允许修改 -->
+<mapper namespace="$mapper.namespace">
+#parse("mapper-resultMap.vm")
+
+#parse("mapper-insert.vm")
+
+#parse("mapper-sql-update.vm")
+
+#parse("mapper-update.vm")
+
+#parse("mapper-delete.vm")
+
+#parse("mapper-deleteBatch.vm")
+
+#parse("mapper-sql-columns.vm")
+
+#parse("mapper-getById.vm")
+
+#parse("mapper-sql-findPageWhere.vm")
+
+#parse("mapper-findPageCount.vm")
+
+#parse("mapper-findPage.vm")
+
+</mapper>

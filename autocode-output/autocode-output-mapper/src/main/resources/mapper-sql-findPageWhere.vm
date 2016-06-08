@@ -1,0 +1,17 @@
+	<sql id="findPage_where">
+		<where>
+#foreach($mapping in $mapper.mappings)
+		<if test="$mapping.property != null">
+			AND $mapping.column = #{$mapping.property}
+		</if>
+#if($mapping.javaType == "java.util.Date")
+		<if test="${mapping.property}Begin != null">
+			AND $mapping.column > #{${mapping.property}Begin}
+		</if>
+		<if test="${mapping.property}End != null">
+			AND $mapping.column < #{${mapping.property}End}
+		</if>
+#end
+#end
+		</where>
+	</sql>

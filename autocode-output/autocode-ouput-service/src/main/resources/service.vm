@@ -1,0 +1,3 @@
+/user/save
+request:List<User>
+response:boolean

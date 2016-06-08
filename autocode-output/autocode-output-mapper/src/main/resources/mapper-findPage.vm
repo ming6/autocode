@@ -1,0 +1,10 @@
+	<select id="findPage" resultMap="RM_$mapper.simpleModelName">
+		SELECT 
+		<include refid="columns" />
+		FROM $mapper.tableName
+		<include refid="findPage_where" />
+	
+		<if test="sortColumns != null">
+			ORDER BY ${sortColumns}
+		</if>
+	</select>

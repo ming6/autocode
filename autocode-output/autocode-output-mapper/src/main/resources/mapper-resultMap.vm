@@ -1,0 +1,5 @@
+	 <resultMap id="RM_$mapper.simpleModelName" type="$mapper.modelName">
+#foreach($mapping in $mapper.mappings)
+		<result property="$mapping.property" column="$mapping.column" />
+#end
+	</resultMap>

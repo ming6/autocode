@@ -1,0 +1,7 @@
+	<sql id="columns">
+		<![CDATA[
+#foreach($mapping in $mapper.mappings)
+			$mapping.column#if($velocityCount<$mapper.mappings.size()),#end\n
+#end
+		]]>
+	</sql>
